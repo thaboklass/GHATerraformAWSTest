@@ -16,13 +16,10 @@ provider "aws" {
   version = "~> 2.36.0"
 }
 
-
-/* Commented out until after bootstrap
-
 # Call the seed_module to build our ADO seed info
 module "bootstrap" {
   source                      = "./modules/bootstrap"
-  name_of_s3_bucket           = "kyler-github-actions-demo-terraform-tfstate"
+  name_of_s3_bucket           = "thabo-terraform-bootstrap"
   dynamo_db_table_name        = "aws-locks"
   iam_user_name               = "GitHubActionsIamUser"
   ado_iam_role_name           = "GitHubActionsIamRole"
@@ -60,4 +57,3 @@ resource "aws_route_table" "route_table2" {
     Terraform = "true"
   }
 }
-*/
